@@ -56,7 +56,7 @@ class _PagesRead extends StatelessWidget {
             Positioned.fill(
               child: CircularProgressIndicator(
                 value: progressRate,
-                backgroundColor: AppColors.outlineColor,
+                backgroundColor: AppColors.disabledColor,
                 color: ProgressColors.getProgressColor(progressRate),
                 strokeWidth: 10,
               ),
@@ -101,7 +101,7 @@ class _BookInformation extends StatelessWidget {
             '${pageTracker.actualPage}/${pageTracker.totalPages}',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               fontWeight: FontWeight.bold,
-              color: AppColors.disabledColor,
+              color: AppColors.outlineColor,
             ),
           ),
         ],

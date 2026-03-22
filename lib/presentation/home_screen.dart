@@ -1,6 +1,5 @@
-import 'package:book_page_tracker/mock/page_tracker_mocked_list.dart';
-import 'package:book_page_tracker/widgets/no_progress_tracker_widget.dart';
-import 'package:book_page_tracker/widgets/progress_tracker_widget.dart';
+import 'package:book_page_tracker/presentation/empty_progress_screen.dart';
+import 'package:book_page_tracker/presentation/progress_trackers_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,25 +7,17 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final hasProgressTrackers = PageTrackerMockedList.list.isNotEmpty;
+    final hasProgressTrackers = false;
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                spacing: 16.0,
-                children: [
-                  // NoProgressTrackerWidget(),
-                  ...PageTrackerMockedList.list.map(
-                    (e) => ProgressTrackerWidget(progressTracker: e),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          child: hasProgressTrackers
+              ? ProgressTrackersScreen()
+              : EmptyProgressScreen(),
         ),
       ),
     );
