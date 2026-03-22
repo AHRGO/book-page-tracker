@@ -4,53 +4,63 @@ final class PageTrackerMockedList {
   static const List<PageTrackerModel> list = [
     PageTrackerModel(
       bookName: "The Hobbit",
-      totalPages: 310,
-      actualPage: 45,
+      totalPages: 1000,
+      actualPage: 48,
+    ),
+    PageTrackerModel(
+      bookName: "The Hobbit",
+      totalPages: 1000,
+      actualPage: 96,
     ),
     PageTrackerModel(
       bookName: "The Lord of the Rings: The Fellowship of the Ring",
-      totalPages: 423,
-      actualPage: 120,
+      totalPages: 1000,
+      actualPage: 183,
     ),
     PageTrackerModel(
       bookName: "The Silmarillion",
-      totalPages: 365,
-      actualPage: 80,
+      totalPages: 1000,
+      actualPage: 245,
     ),
     PageTrackerModel(
       bookName: "Dune",
-      totalPages: 688,
-      actualPage: 250,
+      totalPages: 1000,
+      actualPage: 312,
     ),
     PageTrackerModel(
       bookName: "Foundation",
-      totalPages: 255,
-      actualPage: 90,
+      totalPages: 1000,
+      actualPage: 495,
     ),
     PageTrackerModel(
       bookName: "1984",
-      totalPages: 328,
-      actualPage: 150,
+      totalPages: 1000,
+      actualPage: 566,
+    ),
+    PageTrackerModel(
+      bookName: "1984",
+      totalPages: 1000,
+      actualPage: 645,
     ),
     PageTrackerModel(
       bookName: "Brave New World",
-      totalPages: 311,
-      actualPage: 75,
+      totalPages: 1000,
+      actualPage: 721,
     ),
     PageTrackerModel(
       bookName: "The Name of the Wind",
-      totalPages: 662,
-      actualPage: 300,
+      totalPages: 1000,
+      actualPage: 893,
     ),
     PageTrackerModel(
       bookName: "Mistborn: The Final Empire",
-      totalPages: 541,
-      actualPage: 200,
+      totalPages: 1000,
+      actualPage: 915,
     ),
     PageTrackerModel(
       bookName: "The Way of Kings",
-      totalPages: 1007,
-      actualPage: 410,
+      totalPages: 1000,
+      actualPage: 986,
     ),
   ];
 }
