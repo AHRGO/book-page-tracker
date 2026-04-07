@@ -7,18 +7,16 @@ class ProgressTrackersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          spacing: 16.0,
-          children: PageTrackerMockedList.list
-              .map(
-                (e) => ProgressTrackerWidget(progressTracker: e),
-              )
-              .toList(),
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        spacing: 16.0,
+        children: PageTrackerMockedList.list
+            .map(
+              (e) => ProgressTrackerWidget(progressTracker: e),
+            )
+            .toList(),
       ),
     );
   }

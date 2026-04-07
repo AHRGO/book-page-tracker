@@ -8,13 +8,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final hasProgressTrackers = PageTrackerMockedList.list.isNotEmpty;
-    final hasProgressTrackers = false;
+    final hasProgressTrackers = true;
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.all(16.0),
           child: hasProgressTrackers
               ? ProgressTrackersScreen()
               : EmptyProgressScreen(),
