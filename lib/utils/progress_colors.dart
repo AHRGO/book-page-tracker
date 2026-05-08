@@ -17,6 +17,21 @@ class ProgressColors {
   static const progress100 = ColorPallete.blue50;
   static const progressUndefined = ColorPallete.darkGray50;
 
+  //todo: implement the new colors
+  static const newProgress5 = Color(0xFF9C1515);
+  static const newProgress10 = Color(0xFFB41717);
+  static const newProgress20 = Color(0xFFC54020);
+  static const newProgress30 = Color(0xFFD56829);
+  static const newProgress40 = Color(0xFFF6B83B);
+  static const newProgress50 = Color(0xFFCFC535);
+  static const newProgress60 = Color(0xFFB0CF32);
+  static const newProgress70 = Color(0xFF89CF26);
+  static const newProgress80 = Color(0xFF60CF20);
+  static const newProgress90 = Color(0xFF47C938);
+  static const newProgress95 = Color(0xFF11CC00);
+  static const newProgress100 = Color(0xFF1AE308);
+  
+
   static Color getProgressColor(double progressRate) {
     if (progressRate <= 0.05) {
       return progress5;
