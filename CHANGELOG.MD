@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Flutter Hive CE for dealing with the database: `flutter pub add hive_ce hive_ce_flutter`
 - widget template for screens
 - Padding size 64
 - navigation action, from the empty progress screen to create progress screen (actually in blank)
