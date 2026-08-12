@@ -13,7 +13,28 @@ class EmptyProgressScreen extends StatelessWidget {
     return SizedBox(
       child: Column(
         children: [
-          SizedBox(height: 64.0),
+          const _NoProgressMessage(),
+          FilledButton.icon(
+                      onPressed: () {},
+                      icon: const Icon(Icons.add),
+                      label: const Text('Add tracker'),
+                    ),
+        ],
+      ),
+    );
+  }
+}
+
+
+class _NoProgressMessage extends StatelessWidget {
+  const _NoProgressMessage();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+    
+      children: [
+        SizedBox(height: 64.0),
           Text(
             'Oops, it seems you haven\'t added any progress tracker yet.',
             style: titleStyle,
@@ -23,8 +44,7 @@ class EmptyProgressScreen extends StatelessWidget {
             'Tap the button  bellow to add your first progress tracker!',
             style: titleStyle,
           ),
-        ],
-      ),
+      ]
     );
   }
 }

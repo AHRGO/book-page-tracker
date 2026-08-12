@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- devcontainer.json, intended to controll the extensions to be installed on my codespaces. Stills, I'm not sure how this works at all.
 - This `CHANGELOG` to record project changes.
 - `TODO` file, to infodump the ideas of what to do in the future and let me focus on finish the basics of the project before a.k.a avoid overengineering hell.
 - `learning_journal`, to keep track of what I'm learning with the project.
