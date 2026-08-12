@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:book_page_tracker/shared/color_pallete.dart';
+import 'color_pallete.dart';
 
 class ProgressColors {
   static const progress5 = ColorPallete.red15;
@@ -30,7 +30,6 @@ class ProgressColors {
   static const newProgress90 = Color(0xFF47C938);
   static const newProgress95 = Color(0xFF11CC00);
   static const newProgress100 = Color(0xFF1AE308);
-  
 
   static Color getProgressColor(double progressRate) {
     if (progressRate <= 0.05) {

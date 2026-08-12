@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Logger file
+- launch.json
 - devcontainer.json, intended to controll the extensions to be installed on my codespaces. Stills, I'm not sure how this works at all.
 - This `CHANGELOG` to record project changes.
 - `TODO` file, to infodump the ideas of what to do in the future and let me focus on finish the basics of the project before a.k.a avoid overengineering hell.
@@ -20,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Renamed paddings and whatever
 - Moved `progress_trackers_screen.dart` & `empty_progress_screen` into `/screens` to easily find the `home_screen.dart`.
 - `README` description, with better description of the project and it's main focus.
 

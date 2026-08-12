@@ -1,18 +1,24 @@
-import 'package:book_page_tracker/shared/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import '../../utils/app_colors_local.dart';
+import '../../utils/logger.dart';
+import '../../utils/padding_local.dart';
 
 class EmptyProgressScreen extends StatelessWidget {
   const EmptyProgressScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Center(
       child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const _NoProgressMessage(),
           FilledButton.icon(
             onPressed: () {
               //todo: navigate to track creation screen
+              Logger.logWarning('You\'ve pressed the button!');
             },
             icon: const Icon(Icons.add),
             label: const Text('Add tracker'),
@@ -29,23 +35,20 @@ class _NoProgressMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final titleStyle = theme.textTheme.titleLarge?.copyWith(
-      color: AppColors.onSurfaceColor,
-    );
+    final titleStyle = theme.textTheme.titleLarge?.copyWith(color: AppColorsLocal.onSurfaceColor);
 
-    return Column(
-      children: [
-        SizedBox(height: 64.0),
-        Text(
-          'Oops, it seems you haven\'t added any progress tracker yet.',
-          style: titleStyle,
-        ),
-        SizedBox(height: 32.0),
-        Text(
-          'Tap the button  bellow to add your first progress tracker!',
-          style: titleStyle,
-        ),
-      ],
+    return Container(
+      color: AppColorsLocal.disabledColor,
+      padding: EdgeInsets.all(PaddingsLocal.p8),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          // SizedBox(height: 64.0),
+          Text('Oops, it seems you haven\'t added any progress tracker yet.', style: titleStyle),
+          SizedBox(height: 32.0),
+          Text('Tap the button  bellow to add your first progress tracker!', style: titleStyle),
+        ],
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
-import 'package:book_page_tracker/mock/page_tracker_mocked_list.dart';
-import 'package:book_page_tracker/widgets/progress_tracker_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../mock/page_tracker_mocked_list.dart';
+import '../../widgets/progress_tracker_widget.dart';
 
 class ProgressTrackersScreen extends StatelessWidget {
   const ProgressTrackersScreen({super.key});
@@ -12,11 +13,7 @@ class ProgressTrackersScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         spacing: 16.0,
-        children: PageTrackerMockedList.list
-            .map(
-              (e) => ProgressTrackerWidget(progressTracker: e),
-            )
-            .toList(),
+        children: PageTrackerMockedList.list.map((e) => ProgressTrackerWidget(progressTracker: e)).toList(),
       ),
     );
   }

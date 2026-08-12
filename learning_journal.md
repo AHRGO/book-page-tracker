@@ -8,6 +8,7 @@
 
 ### Codespaces & "Infrastructure"
 
+- It turns out that is way easier just download the `lib` folder into the local machine (with Flutter SDK already installed) and run the project locally than try to make it run on a codespaces container. Best to let de container just to write the code
 - Had trouble installing Flutter SDK by vs code, in my codespaces. Following [flutter tutorial](https://docs.flutter.dev/install/manual)
     - It seems that I will need to manually be adding the flutter sdk on the project... that's crap, since the tar.xz has 1,44GB
     - Let's wait to see if I will really need this.

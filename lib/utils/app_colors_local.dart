@@ -1,6 +1,6 @@
-import 'package:book_page_tracker/shared/color_pallete.dart';
+import 'color_pallete.dart';
 
-class AppColors {
+class AppColorsLocal {
   static const outlineColor = ColorPallete.darkGray60;
   // static const surfaceColor = ColorPallete.lightGray95;
 
