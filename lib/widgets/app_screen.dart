@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/app_colors.dart';
-import '../utils/paddings.dart';
+import '../utils/app_sizes.dart';
 
 class AppScreen extends StatelessWidget {
   final Widget child;
@@ -12,10 +11,10 @@ class AppScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: AppColors.surfaceColor,
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      // backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(Paddings.p32),
+          padding: const EdgeInsets.all(AppSizes.size32),
           child: child,
         ),
       ),

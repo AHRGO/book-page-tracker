@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../utils/app_colors.dart';
 import '../../utils/logger.dart';
-import '../../utils/paddings.dart';
+import '../../utils/app_sizes.dart';
 import '../../widgets/app_screen.dart';
-import 'create_tracker_screen.dart';
+import 'create_tracker/create_tracker_screen.dart';
 
 class EmptyProgressScreen extends StatelessWidget {
   const EmptyProgressScreen({super.key});
@@ -54,7 +54,7 @@ class _NoProgressMessage extends StatelessWidget {
 
     return Container(
       color: AppColors.disabledColor,
-      padding: EdgeInsets.all(Paddings.p16),
+      padding: EdgeInsets.all(AppSizes.size16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -63,7 +63,7 @@ class _NoProgressMessage extends StatelessWidget {
             'Oops, it seems you haven\'t added any progress tracker yet.',
             style: titleStyle,
           ),
-          SizedBox(height: 32.0),
+          SizedBox(height: AppSizes.size32),
           Text(
             'Tap the button  bellow to add your first progress tracker!',
             style: titleStyle,
