@@ -2,28 +2,33 @@ import 'package:flutter/material.dart';
 
 import '../../utils/app_colors_local.dart';
 import '../../utils/logger.dart';
-import '../../utils/padding_local.dart';
+import '../../utils/paddings.dart';
+import 'create_tracker_screen.dart';
 
 class EmptyProgressScreen extends StatelessWidget {
   const EmptyProgressScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const _NoProgressMessage(),
-          FilledButton.icon(
-            onPressed: () {
-              //todo: navigate to track creation screen
-              Logger.logWarning('You\'ve pressed the button!');
-            },
-            icon: const Icon(Icons.add),
-            label: const Text('Add tracker'),
-          ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.all(Paddings.p64),
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const _NoProgressMessage(),
+            FilledButton.icon(
+              onPressed: () {
+                //todo: navigate to track creation screen
+                Logger.logWarning('You\'ve pressed the button!');
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateTrackerScreen()));
+              },
+              icon: const Icon(Icons.add),
+              label: const Text('Add tracker'),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -39,7 +44,7 @@ class _NoProgressMessage extends StatelessWidget {
 
     return Container(
       color: AppColorsLocal.disabledColor,
-      padding: EdgeInsets.all(PaddingsLocal.p8),
+      padding: EdgeInsets.all(Paddings.p16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

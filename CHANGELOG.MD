@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Padding size 64
+- navigation action, from the empty progress screen to create progress screen (actually in blank)
+- create tracker screen
 - Logger file
 - launch.json
 - devcontainer.json, intended to controll the extensions to be installed on my codespaces. Stills, I'm not sure how this works at all.
