@@ -1,6 +1,7 @@
-import 'package:book_page_tracker/presentation/empty_progress_screen.dart';
-import 'package:book_page_tracker/presentation/progress_trackers_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/empty_progress_screen.dart';
+import 'screens/progress_trackers_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,9 +16,7 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: hasProgressTrackers
-              ? ProgressTrackersScreen()
-              : EmptyProgressScreen(),
+          child: hasProgressTrackers ? ProgressTrackersScreen() : EmptyProgressScreen(),
         ),
       ),
     );
