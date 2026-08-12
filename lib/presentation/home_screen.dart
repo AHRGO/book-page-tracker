@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:progress_tracker/widgets/app_screen.dart';
 
 import 'screens/empty_progress_screen.dart';
 import 'screens/progress_trackers_screen.dart';
@@ -13,11 +14,10 @@ class HomeScreen extends StatelessWidget {
     // final hasProgressTrackers = true;
     final hasProgressTrackers = false;
 
-    return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surface,
-      body: SafeArea(
-        child: Padding(padding: const EdgeInsets.all(16.0), child: hasProgressTrackers ? ProgressTrackersScreen() : EmptyProgressScreen()),
-      ),
+    return AppScreen(
+      child: hasProgressTrackers
+          ? ProgressTrackersScreen()
+          : EmptyProgressScreen(),
     );
   }
 }

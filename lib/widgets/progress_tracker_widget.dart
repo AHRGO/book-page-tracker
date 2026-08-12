@@ -2,25 +2,35 @@ import 'package:flutter/material.dart';
 
 import '../models/page_tracker_model.dart';
 
-import '../utils/app_colors_local.dart';
+import '../utils/app_colors.dart';
 import '../utils/progress_colors.dart';
 
 class ProgressTrackerWidget extends StatelessWidget {
   final PageTrackerModel progressTracker;
 
-  const ProgressTrackerWidget({super.key, required this.progressTracker});
+  const ProgressTrackerWidget({
+    super.key,
+    required this.progressTracker,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: EdgeInsetsGeometry.symmetric(vertical: 16.0, horizontal: 16.0),
+        padding: EdgeInsetsGeometry.symmetric(
+          vertical: 16.0,
+          horizontal: 16.0,
+        ),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             _PagesRead(progressRate: progressTracker.progress),
-            Expanded(child: _BookInformation(pageTracker: progressTracker)),
+            Expanded(
+              child: _BookInformation(
+                pageTracker: progressTracker,
+              ),
+            ),
           ],
         ),
       ),
@@ -32,7 +42,10 @@ class _PagesRead extends StatelessWidget {
   final double progressRate;
   final double size;
 
-  const _PagesRead({required this.progressRate, this.size = 75.0});
+  const _PagesRead({
+    required this.progressRate,
+    this.size = 75.0,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +59,10 @@ class _PagesRead extends StatelessWidget {
             Positioned.fill(
               child: CircularProgressIndicator(
                 value: progressRate,
-                backgroundColor: AppColorsLocal.disabledColor,
-                color: ProgressColors.getProgressColor(progressRate),
+                backgroundColor: AppColors.disabledColor,
+                color: ProgressColors.getProgressColor(
+                  progressRate,
+                ),
                 strokeWidth: 10,
               ),
             ),
@@ -55,7 +70,11 @@ class _PagesRead extends StatelessWidget {
               alignment: AlignmentGeometry.center,
               child: Text(
                 ' ${(progressRate * 100).toStringAsFixed(2)}%',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold, color: AppColorsLocal.onSurfaceColor),
+                style: Theme.of(context).textTheme.bodySmall
+                    ?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.onSurfaceColor,
+                    ),
               ),
             ),
           ],
@@ -77,11 +96,20 @@ class _BookInformation extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Text(pageTracker.bookName, overflow: TextOverflow.ellipsis, maxLines: 2, style: Theme.of(context).textTheme.titleSmall),
+          Text(
+            pageTracker.bookName,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
           const SizedBox(height: 16.0),
           Text(
             '${pageTracker.actualPage}/${pageTracker.totalPages}',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, color: AppColorsLocal.outlineColor),
+            style: Theme.of(context).textTheme.bodyMedium
+                ?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.outlineColor,
+                ),
           ),
         ],
       ),
