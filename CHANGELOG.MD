@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- settings.json, atualizando limite de caracteres em uma linha
 - Renamed paddings and whatever
 - Moved `progress_trackers_screen.dart` & `empty_progress_screen` into `/screens` to easily find the `home_screen.dart`.
 - `README` description, with better description of the project and it's main focus.
