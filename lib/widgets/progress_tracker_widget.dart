@@ -15,7 +15,7 @@ class ProgressTrackerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: EdgeInsetsGeometry.symmetric(vertical: 16.0, horizontal: 16.0),
+        padding: EdgeInsetsGeometry.all(16.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

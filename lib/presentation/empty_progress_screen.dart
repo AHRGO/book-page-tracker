@@ -1,4 +1,5 @@
 import 'package:book_page_tracker/shared/app_colors.dart';
+import 'package:book_page_tracker/widgets/empty_progress_widget.dart';
 import 'package:flutter/material.dart';
 
 class EmptyProgressScreen extends StatelessWidget {
@@ -10,21 +11,45 @@ class EmptyProgressScreen extends StatelessWidget {
     final titleStyle = theme.textTheme.titleLarge?.copyWith(
       color: AppColors.onSurfaceColor,
     );
-    return SizedBox(
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
       child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        spacing: 72.0,
         children: [
-          SizedBox(height: 64.0),
-          Text(
-            'Oops, it seems you haven\'t added any progress tracker yet.',
-            style: titleStyle,
-          ),
-          SizedBox(height: 32.0),
-          Text(
-            'Tap the button  bellow to add your first progress tracker!',
-            style: titleStyle,
-          ),
+          const _TutorialTextColumn(),
+          const EmptyProgressWidget(),
         ],
       ),
+    );
+  }
+}
+
+class _TutorialTextColumn extends StatelessWidget {
+  const _TutorialTextColumn();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final titleStyle = theme.textTheme.titleLarge?.copyWith(
+      color: AppColors.onSurfaceColor,
+    );
+
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.center,
+      spacing: 32.0,
+      children: [
+        Text(
+          'Oops, it seems you haven\'t added any progress tracker yet.',
+          style: titleStyle,
+        ),
+        Text(
+          'Tap the button  bellow to add your first progress tracker!',
+          style: titleStyle,
+        ),
+      ],
     );
   }
 }
