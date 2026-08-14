@@ -17,5 +17,11 @@ class HiveDatasource {
 
   Future<Box<ProgressTrackerModel>> getProgressTrackerBox() async {
     return await Hive.openBox<ProgressTrackerModel>('progress_tracker');
+
+    // final box = await openProgressTrackerBox();
+
+    // // if (box.)
+
+    // return box;
   }
 }
