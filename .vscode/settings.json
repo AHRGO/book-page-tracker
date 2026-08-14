@@ -1,4 +1,4 @@
 {
-    "dart.lineLength": 64,
-    "editor.formatOnSave": true
+    "dart.lineLength": 80,
+    "editor.formatOnSave": true,
 }

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../models/page_tracker_model.dart';
+import '../models/progress_tracker_model.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/progress_colors.dart';
 
 class ProgressTrackerWidget extends StatelessWidget {
-  final PageTrackerModel progressTracker;
+  final ProgressTrackerModel progressTracker;
 
   const ProgressTrackerWidget({
     super.key,
@@ -85,7 +85,7 @@ class _PagesRead extends StatelessWidget {
 }
 
 class _BookInformation extends StatelessWidget {
-  final PageTrackerModel pageTracker;
+  final ProgressTrackerModel pageTracker;
 
   const _BookInformation({required this.pageTracker});
 
@@ -97,14 +97,14 @@ class _BookInformation extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           Text(
-            pageTracker.bookName,
+            pageTracker.projectName,
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
             style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(height: 16.0),
           Text(
-            '${pageTracker.actualPage}/${pageTracker.totalPages}',
+            '${pageTracker.currentPosition}/${pageTracker.totalPositions}',
             style: Theme.of(context).textTheme.bodyMedium
                 ?.copyWith(
                   fontWeight: FontWeight.bold,

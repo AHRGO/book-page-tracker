@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/app_sizes.dart';
+import '../utils/size_utils.dart';
 
 class AppScreen extends StatelessWidget {
   final Widget child;
@@ -14,7 +14,7 @@ class AppScreen extends StatelessWidget {
       // backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(AppSizes.size32),
+          padding: const EdgeInsets.all(SizeUtils.size32),
           child: child,
         ),
       ),

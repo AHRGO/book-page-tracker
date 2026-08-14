@@ -1,18 +1,79 @@
-import '../models/page_tracker_model.dart';
+import '../models/progress_tracker_model.dart';
 
 final class PageTrackerMockedList {
-  static const List<PageTrackerModel> list = [
-    PageTrackerModel(bookName: "The Hobbit", totalPages: 1000, actualPage: 48),
-    PageTrackerModel(bookName: "The Hobbit", totalPages: 1000, actualPage: 96),
-    PageTrackerModel(bookName: "The Lord of the Rings: The Fellowship of the Ring", totalPages: 1000, actualPage: 183),
-    PageTrackerModel(bookName: "The Silmarillion", totalPages: 1000, actualPage: 245),
-    PageTrackerModel(bookName: "Dune", totalPages: 1000, actualPage: 312),
-    PageTrackerModel(bookName: "Foundation", totalPages: 1000, actualPage: 495),
-    PageTrackerModel(bookName: "1984", totalPages: 1000, actualPage: 566),
-    PageTrackerModel(bookName: "1984", totalPages: 1000, actualPage: 645),
-    PageTrackerModel(bookName: "Brave New World", totalPages: 1000, actualPage: 721),
-    PageTrackerModel(bookName: "The Name of the Wind", totalPages: 1000, actualPage: 893),
-    PageTrackerModel(bookName: "Mistborn: The Final Empire", totalPages: 1000, actualPage: 915),
-    PageTrackerModel(bookName: "The Way of Kings", totalPages: 1000, actualPage: 986),
+  static const List<ProgressTrackerModel> list = [
+    ProgressTrackerModel(
+      projectId: 0,
+      projectName: "The Hobbit",
+      totalPositions: 1000,
+      currentPosition: 48,
+    ),
+    ProgressTrackerModel(
+      projectId: 1,
+      projectName: "The Hobbit",
+      totalPositions: 1000,
+      currentPosition: 96,
+    ),
+    ProgressTrackerModel(
+      projectId: 2,
+      projectName:
+          "The Lord of the Rings: The Fellowship of the Ring",
+      totalPositions: 1000,
+      currentPosition: 183,
+    ),
+    ProgressTrackerModel(
+      projectId: 3,
+      projectName: "The Silmarillion",
+      totalPositions: 1000,
+      currentPosition: 245,
+    ),
+    ProgressTrackerModel(
+      projectId: 4,
+      projectName: "Dune",
+      totalPositions: 1000,
+      currentPosition: 312,
+    ),
+    ProgressTrackerModel(
+      projectId: 5,
+      projectName: "Foundation",
+      totalPositions: 1000,
+      currentPosition: 495,
+    ),
+    ProgressTrackerModel(
+      projectId: 6,
+      projectName: "1984",
+      totalPositions: 1000,
+      currentPosition: 566,
+    ),
+    ProgressTrackerModel(
+      projectId: 7,
+      projectName: "1984",
+      totalPositions: 1000,
+      currentPosition: 645,
+    ),
+    ProgressTrackerModel(
+      projectId: 8,
+      projectName: "Brave New World",
+      totalPositions: 1000,
+      currentPosition: 721,
+    ),
+    ProgressTrackerModel(
+      projectId: 9,
+      projectName: "The Name of the Wind",
+      totalPositions: 1000,
+      currentPosition: 893,
+    ),
+    ProgressTrackerModel(
+      projectId: 10,
+      projectName: "Mistborn: The Final Empire",
+      totalPositions: 1000,
+      currentPosition: 915,
+    ),
+    ProgressTrackerModel(
+      projectId: 11,
+      projectName: "The Way of Kings",
+      totalPositions: 1000,
+      currentPosition: 986,
+    ),
   ];
 }

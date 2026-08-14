@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:progress_tracker/utils/logger.dart';
-import 'package:progress_tracker/utils/app_sizes.dart';
 
+import '../../../utils/size_utils.dart';
+import '../../../utils/logger_utils.dart';
 import '../../../widgets/app_screen.dart';
 import 'widgets/project_type_dropdown.dart';
 import 'widgets/project_unity_dropdown.dart';
@@ -46,7 +46,7 @@ class _CreateTrackerScreenState
       _currentPositionController.text,
     );
 
-    Logger.logInfo(
+    LoggerUtils.logInfo(
       'The user is at $currentPosition of $totalPositions in $name',
     );
   }
@@ -57,13 +57,15 @@ class _CreateTrackerScreenState
       child: Form(
         key: _formKey,
         child: Column(
-          spacing: AppSizes.size32,
+          spacing: SizeUtils.size32,
           children: [
             // type
             ProjectTypeDropdown(
               selectedOption: _typeSelected,
               onChanged: (value) {
-                Logger.logInfo(':: TYPE SELECTED => $value');
+                LoggerUtils.logInfo(
+                  ':: TYPE SELECTED => $value',
+                );
                 setState(() {
                   _typeSelected = value;
                 });
@@ -91,7 +93,9 @@ class _CreateTrackerScreenState
             ProjectUnityDropdown(
               selectedOption: _unitySelected,
               onChanged: (value) {
-                Logger.logInfo(':: UNITY SELECTED => $value');
+                LoggerUtils.logInfo(
+                  ':: UNITY SELECTED => $value',
+                );
                 setState(() {
                   _unitySelected = value;
                 });
@@ -122,7 +126,7 @@ class _CreateTrackerScreenState
               //todo: implement validator
               // validator: ,
             ),
-            const SizedBox(height: AppSizes.size16),
+            const SizedBox(height: SizeUtils.size16),
             FilledButton(
               onPressed: _submit,
               child: Text('Create Tracker!'),

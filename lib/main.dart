@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:hive_ce_flutter/hive_ce_flutter.dart';
 
+import 'datasources/hive_datasource.dart';
+import 'datasources/hive_registrar.g.dart';
 import 'presentation/home_screen.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Hive.initFlutter();
 
-  await Hive.openBox('trackers'); //? actual 'table' name?
+  Hive.registerAdapters();
+
+  HiveDatasource().initHive();
+
+  // await Hive.openBox('trackers'); //? actual 'table' name?
 
   runApp(const MyApp());
 }

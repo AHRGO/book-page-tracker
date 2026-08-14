@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/app_sizes.dart';
+import '../../../../utils/size_utils.dart';
 
 class ProjectTypeDropdown extends StatelessWidget {
   final Function(String?) onChanged;
@@ -18,7 +18,7 @@ class ProjectTypeDropdown extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text('What are you tracking your progress on?'),
-        const SizedBox(height: AppSizes.size4),
+        const SizedBox(height: SizeUtils.size4),
         DropdownButtonFormField(
           items: _projectTypes
               .map(

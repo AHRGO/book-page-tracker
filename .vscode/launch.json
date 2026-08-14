@@ -6,41 +6,30 @@
     "configurations": [
         {
             "name": "Flutter - web (Chrome)",
+            "program": "lib/main.dart",
             "request": "launch",
             "type": "dart",
             "deviceId": "chrome"
         },
         {
-            "name": "Flutter - Linux",
+            "name": "Flutter - Windows",
+            "program": "lib/main.dart",
             "request": "launch",
             "type": "dart",
-            "deviceId":"linux"
-        }
-
-
+            "deviceId":"windows"
+        },
         // {
-        //     "name": "Flutter - Windows",
+        //     "name": "Flutter - Linux",
         //     "request": "launch",
         //     "type": "dart",
-        //     "deviceId":"windows"
+        //     "deviceId":"linux"
         // },
 
         // {
-        //     "name": "book-page-tracker",
+        //     "name": "progress_tracker (Flutter)",
+        //     "program": "lib/main.dart",
         //     "request": "launch",
         //     "type": "dart"
-        // },
-        // {
-        //     "name": "book-page-tracker (profile mode)",
-        //     "request": "launch",
-        //     "type": "dart",
-        //     "flutterMode": "profile"
-        // },
-        // {
-        //     "name": "book-page-tracker (release mode)",
-        //     "request": "launch",
-        //     "type": "dart",
-        //     "flutterMode": "release"
-        // },
+        // }
     ]
 }
