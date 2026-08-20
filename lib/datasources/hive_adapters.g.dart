@@ -17,7 +17,7 @@ class ProgressTrackerModelAdapter extends TypeAdapter<ProgressTrackerModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return ProgressTrackerModel(
-      projectId: (fields[0] as num).toInt(),
+      projectId: fields[0] as String,
       projectName: fields[1] as String,
       totalPositions: (fields[2] as num).toInt(),
       currentPosition: (fields[3] as num).toInt(),

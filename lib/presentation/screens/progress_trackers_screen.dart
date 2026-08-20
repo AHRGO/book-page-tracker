@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:progress_tracker/models/progress_tracker_model.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-// import '../../mock/page_tracker_mocked_list.dart';
+import '../../models/progress_tracker_model.dart';
 import '../../widgets/app_screen.dart';
 import '../../widgets/progress_tracker_widget.dart';
+import '../bloc/progress_tracker_bloc.dart';
 import 'create_tracker/create_tracker_screen.dart';
 
 class ProgressTrackersScreen extends StatelessWidget {
@@ -25,22 +26,14 @@ class ProgressTrackersScreen extends StatelessWidget {
               children: [
                 FilledButton.icon(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const CreateTrackerScreen(),
-                      ),
-                    );
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateTrackerScreen()));
                   },
                   label: const Text('Create a new tracker'),
                   icon: Icon(Icons.add),
                   iconAlignment: IconAlignment.end,
                 ),
                 FilledButton.icon(
-                  onPressed: () {
-                    //todo: delete all trackers
-                    //* mainly for testing crud functions.
-                  },
+                  onPressed: () => context.read<ProgressTrackerBloc>().add(DeleteAllTrackers()),
                   label: const Text('Delete trackers'),
                   icon: Icon(Icons.delete),
                   iconAlignment: IconAlignment.end,
@@ -48,9 +41,7 @@ class ProgressTrackersScreen extends StatelessWidget {
                 ),
               ],
             ),
-            ...progressTrackerList.map(
-              (e) => ProgressTrackerWidget(progressTracker: e),
-            ),
+            ...progressTrackerList.map((e) => ProgressTrackerWidget(progressTracker: e)),
           ],
         ),
       ),

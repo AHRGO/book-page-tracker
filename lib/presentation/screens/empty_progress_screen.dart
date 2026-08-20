@@ -20,17 +20,7 @@ class EmptyProgressScreen extends StatelessWidget {
             const _NoProgressMessage(),
             FilledButton.icon(
               onPressed: () {
-                //todo: navigate to track creation screen
-                LoggerUtils.logWarning(
-                  'You\'ve pressed the button!',
-                );
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const CreateTrackerScreen(),
-                  ),
-                );
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateTrackerScreen()));
               },
               icon: const Icon(Icons.add),
               label: const Text('Add tracker'),
@@ -48,9 +38,7 @@ class _NoProgressMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final titleStyle = theme.textTheme.titleLarge?.copyWith(
-      color: AppColors.onSurfaceColor,
-    );
+    final titleStyle = theme.textTheme.titleLarge?.copyWith(color: AppColors.onSurfaceColor);
 
     return Container(
       color: AppColors.disabledColor,
@@ -59,15 +47,9 @@ class _NoProgressMessage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           // SizedBox(height: 64.0),
-          Text(
-            'Oops, it seems you haven\'t added any progress tracker yet.',
-            style: titleStyle,
-          ),
+          Text('Oops, it seems you haven\'t added any progress tracker yet.', style: titleStyle),
           SizedBox(height: SizeUtils.size32),
-          Text(
-            'Tap the button  bellow to add your first progress tracker!',
-            style: titleStyle,
-          ),
+          Text('Tap the button  bellow to add your first progress tracker!', style: titleStyle),
         ],
       ),
     );

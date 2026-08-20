@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:hive_ce_flutter/hive_ce_flutter.dart';
-import 'package:progress_tracker/utils/logger_utils.dart';
 
 import '../../datasources/hive_datasource.dart';
 import '../../mock/page_tracker_mocked_list.dart';
-// import '../../models/progress_tracker_model.dart';
+import '../../utils/logger_utils.dart';
 import '../../utils/size_utils.dart';
 import '../../widgets/app_screen.dart';
 
@@ -70,7 +68,7 @@ class _HiveTestScreenState extends State<HiveTestScreen> {
 
                 final trackersList = box.values.toList();
                 for (final track in trackersList) {
-                  LoggerUtils.magenta.log('${track.projectName}');
+                  LoggerUtils.magenta.log(track.projectName);
                 }
 
                 // trackersList.map(

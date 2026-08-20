@@ -1,8 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class ProgressTrackerModel extends Equatable {
-  //todo: in the future, switch to UUID
-  final int projectId;
+  final String projectId;
   final String projectName;
   final int totalPositions;
   final int currentPosition;
@@ -21,12 +20,5 @@ class ProgressTrackerModel extends Equatable {
   });
 
   @override
-  List<Object?> get props => [
-    projectId,
-    projectType,
-    projectName,
-    trackingUnity,
-    totalPositions,
-    currentPosition,
-  ];
+  List<Object?> get props => [projectId, projectType, projectName, trackingUnity, totalPositions, currentPosition];
 }
