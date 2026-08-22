@@ -23,7 +23,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Progress Tracker',
-      home: BlocProvider(create: (context) => ProgressTrackerBloc()..add(LoadProgressTrackerList()), child: HomeScreen()),
+      home: BlocProvider(
+        create: (context) => ProgressTrackerBloc()..add(LoadProgressTrackerList()),
+        child: HomeScreen(),
+      ),
     );
   }
 }

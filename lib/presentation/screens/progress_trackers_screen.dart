@@ -14,6 +14,8 @@ class ProgressTrackersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = context.read<ProgressTrackerBloc>();
+
     return AppScreen(
       child: SingleChildScrollView(
         child: Column(
@@ -26,14 +28,24 @@ class ProgressTrackersScreen extends StatelessWidget {
               children: [
                 FilledButton.icon(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateTrackerScreen()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BlocProvider.value(
+                          value: bloc,
+                          child: const CreateTrackerScreen(),
+                        ),
+                      ),
+                    );
                   },
                   label: const Text('Create a new tracker'),
                   icon: Icon(Icons.add),
                   iconAlignment: IconAlignment.end,
                 ),
                 FilledButton.icon(
-                  onPressed: () => context.read<ProgressTrackerBloc>().add(DeleteAllTrackers()),
+                  onPressed: () {
+                    bloc.add(DeleteAllTrackers());
+                  },
                   label: const Text('Delete trackers'),
                   icon: Icon(Icons.delete),
                   iconAlignment: IconAlignment.end,

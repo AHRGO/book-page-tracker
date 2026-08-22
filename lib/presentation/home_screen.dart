@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/app_screen.dart';
 import 'bloc/progress_tracker_bloc.dart';
 import 'screens/empty_progress_screen.dart';
+import 'screens/loading/loading_screen.dart';
 import 'screens/progress_trackers_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
         },
         builder: (context, state) {
           if (state is LoadingProgressTrackerState) {
-            return const CircularProgressIndicator();
+            return const LoadingScreen();
           }
 
           if (state is LoadedProgressTrackersListState) {
