@@ -23,21 +23,6 @@ class EmptyProgressScreen extends StatelessWidget {
           children: [
             const _NoProgressMessage(),
             CreateTrackerButton(bloc: bloc),
-            // FilledButton.icon(
-            //   onPressed: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //         builder: (context) => BlocProvider.value(
-            //           value: bloc,
-            //           child: const CreateTrackerScreen(),
-            //         ),
-            //       ),
-            //     );
-            //   },
-            //   icon: const Icon(Icons.add),
-            //   label: const Text('Add tracker'),
-            // ),
           ],
         ),
       ),

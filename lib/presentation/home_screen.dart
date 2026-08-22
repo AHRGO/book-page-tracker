@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../widgets/app_screen.dart';
+import 'screens/app_screen.dart';
 import 'bloc/progress_tracker_bloc.dart';
 import 'screens/empty_progress_screen.dart';
 import 'screens/loading/loading_screen.dart';

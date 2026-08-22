@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../utils/size_utils.dart';
-import '../../../widgets/app_screen.dart';
+import '../app_screen.dart';
 import '../../bloc/progress_tracker_bloc.dart';
 import '../loading/loading_screen.dart';
 import 'widgets/project_type_dropdown.dart';
@@ -76,22 +76,13 @@ class _CreateTrackerScreenState extends State<CreateTrackerScreen> {
             child: Column(
               spacing: SizeUtils.size32,
               children: [
-                // type
-                ProjectTypeDropdown(
-                  selectedOption: _typeSelected,
-                  onChanged: (value) {
-                    setState(() {
-                      _typeSelected = value;
-                    });
-                  },
-                ),
-
                 // name
                 TextFormField(
                   controller: _projectNameController,
                   decoration: InputDecoration(
-                    labelText: '${_typeSelected ?? 'Project'} name:',
-                    hintText: 'Enter the name of the ${_typeSelected ?? 'project'} you want to track',
+                    labelText: '${_typeSelected ?? 'Tracker'} name:',
+                    hintText: 'Enter the name of what you want to track',
+                    // hintText: 'Enter the name of the ${_typeSelected ?? 'tracker'} you want to track',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
@@ -103,14 +94,12 @@ class _CreateTrackerScreenState extends State<CreateTrackerScreen> {
                   },
                 ),
 
-                //unity
-                ProjectUnityDropdown(selectedOption: _unitySelected, onChanged: (value) => setState(() => _unitySelected = value)),
-
                 //total positions
                 TextFormField(
                   controller: _totalPositionsController,
                   decoration: InputDecoration(
-                    labelText: 'Total of ${_unitySelected ?? 'positions'}',
+                    labelText: 'Total:',
+                    // labelText: 'Total of ${_unitySelected ?? 'positions'}',
                     hintText: 'The amount of ${_unitySelected ?? 'positions'} your ${_typeSelected ?? 'project'} has',
                     border: const OutlineInputBorder(),
                   ),
@@ -159,6 +148,27 @@ class _CreateTrackerScreenState extends State<CreateTrackerScreen> {
 
                     return null;
                   },
+                ),
+                ExpansionTile(
+                  title: const Text('Optional details'),
+                  childrenPadding: EdgeInsets.all(SizeUtils.size16),
+                  children: [
+                    const SizedBox(height: SizeUtils.size24),
+
+                    // type
+                    ProjectTypeDropdown(
+                      selectedOption: _typeSelected,
+                      onChanged: (value) {
+                        setState(() {
+                          _typeSelected = value;
+                        });
+                      },
+                    ),
+                    SizedBox(height: SizeUtils.size16),
+                    //unity
+                    ProjectUnityDropdown(selectedOption: _unitySelected, onChanged: (value) => setState(() => _unitySelected = value)),
+                    const SizedBox(height: SizeUtils.size24),
+                  ],
                 ),
                 const SizedBox(height: SizeUtils.size16),
                 FilledButton(
