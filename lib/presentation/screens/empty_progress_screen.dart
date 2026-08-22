@@ -3,9 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../utils/app_colors.dart';
 import '../../utils/size_utils.dart';
-import '../../widgets/app_screen.dart';
+import '../../widgets/create_tracker_button.dart';
+import 'app_screen.dart';
 import '../bloc/progress_tracker_bloc.dart';
-import 'create_tracker/create_tracker_screen.dart';
+// import 'create_tracker/create_tracker_screen.dart';
 
 class EmptyProgressScreen extends StatelessWidget {
   const EmptyProgressScreen({super.key});
@@ -21,21 +22,22 @@ class EmptyProgressScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const _NoProgressMessage(),
-            FilledButton.icon(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BlocProvider.value(
-                      value: bloc,
-                      child: const CreateTrackerScreen(),
-                    ),
-                  ),
-                );
-              },
-              icon: const Icon(Icons.add),
-              label: const Text('Add tracker'),
-            ),
+            CreateTrackerButton(bloc: bloc),
+            // FilledButton.icon(
+            //   onPressed: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //         builder: (context) => BlocProvider.value(
+            //           value: bloc,
+            //           child: const CreateTrackerScreen(),
+            //         ),
+            //       ),
+            //     );
+            //   },
+            //   icon: const Icon(Icons.add),
+            //   label: const Text('Add tracker'),
+            // ),
           ],
         ),
       ),
