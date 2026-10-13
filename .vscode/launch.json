@@ -5,26 +5,32 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Flutter - web (Chrome)",
-            "program": "lib/main.dart",
-            "request": "launch",
+            "name": "Flutter",
             "type": "dart",
-            "deviceId": "chrome"
-        },
-        {
-            "name": "Flutter - Windows",
-            "program": "lib/main.dart",
             "request": "launch",
-            "type": "dart",
-            "deviceId":"windows"
+            "program": "lib/main.dart",
+            "flutterMode": "profile"
         },
+        // {
+        //     "name": "Flutter - web (Chrome)",
+        //     "program": "lib/main.dart",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "deviceId": "chrome"
+        // },
+        // {
+        //     "name": "Flutter - Windows",
+        //     "program": "lib/main.dart",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "deviceId": "windows"
+        // },
         // {
         //     "name": "Flutter - Linux",
         //     "request": "launch",
         //     "type": "dart",
-        //     "deviceId":"linux"
+        //     "deviceId": "linux"
         // },
-
         // {
         //     "name": "progress_tracker (Flutter)",
         //     "program": "lib/main.dart",
