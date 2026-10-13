@@ -1,6 +1,10 @@
 # book-page-tracker
 A tool to track your progress, plus, where you stopped in one long activity.
 
+`UPDATE:` this branch represents a version of the project where I've intended to create a generic progress tracker (for books, movies, classes, series, etc). 
+
+Since this added to much complexity to the project, I've decided to let it aside, for now, focusing on finishing a progress tracker for books first.
+
 # A bit of context.
 I'm a reader. In fact, I'm more likely to be called a bookworm. And many times, I've started more than one book at a time.
 
