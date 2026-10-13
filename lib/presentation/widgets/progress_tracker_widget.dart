@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../models/progress_tracker_model.dart';
+import '../../models/progress_tracker_model.dart';
 
-import '../utils/app_colors.dart';
-import '../utils/progress_colors.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/progress_colors.dart';
 
 class ProgressTrackerWidget extends StatelessWidget {
   final ProgressTrackerModel progressTracker;

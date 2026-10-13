@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../presentation/bloc/progress_tracker_bloc.dart';
+import '../bloc/progress_tracker_bloc.dart';
 
 class DeleteTrackersButton extends StatelessWidget {
   final ProgressTrackerBloc bloc;

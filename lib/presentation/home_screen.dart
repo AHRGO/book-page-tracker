@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'screens/app_screen.dart';
+import 'screens/app/app_screen.dart';
 import 'bloc/progress_tracker_bloc.dart';
-import 'screens/empty_progress_screen.dart';
+import 'screens/empty_progress/empty_progress_screen.dart';
+import 'screens/progress_trackers/progress_trackers_screen.dart';
 import 'screens/loading/loading_screen.dart';
-import 'screens/progress_trackers_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

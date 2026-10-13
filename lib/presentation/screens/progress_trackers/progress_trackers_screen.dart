@@ -1,13 +1,13 @@
-import 'package:book_page_tracker/utils/size_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../models/progress_tracker_model.dart';
+import '../../../models/progress_tracker_model.dart';
+import '../../../utils/size_utils.dart';
 import '../../widgets/delete_trackers_button.dart';
-import 'app_screen.dart';
+import '../app/app_screen.dart';
 import '../../widgets/progress_tracker_widget.dart';
-import '../bloc/progress_tracker_bloc.dart';
-import 'create_tracker/create_tracker_screen.dart';
+import '../../bloc/progress_tracker_bloc.dart';
+import '../create_tracker/create_tracker_screen.dart';
 
 class ProgressTrackersScreen extends StatelessWidget {
   final List<ProgressTrackerModel> progressTrackerList;

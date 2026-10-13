@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../utils/app_colors.dart';
-import '../../utils/size_utils.dart';
+import '../../../utils/app_colors.dart';
+import '../../../utils/size_utils.dart';
 import '../../widgets/create_tracker_button.dart';
-import 'app_screen.dart';
-import '../bloc/progress_tracker_bloc.dart';
+import '../app/app_screen.dart';
+import '../../bloc/progress_tracker_bloc.dart';
 // import 'create_tracker/create_tracker_screen.dart';
 
 class EmptyProgressScreen extends StatelessWidget {

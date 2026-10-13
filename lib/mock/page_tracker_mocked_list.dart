@@ -4,12 +4,7 @@ final class PageTrackerMockedList {
   static const List<ProgressTrackerModel> list = [
     ProgressTrackerModel(projectId: "0", projectName: "The Hobbit", totalPositions: 1000, currentPosition: 48),
     ProgressTrackerModel(projectId: "1", projectName: "The Hobbit", totalPositions: 1000, currentPosition: 96),
-    ProgressTrackerModel(
-      projectId: "2",
-      projectName: "The Lord of the Rings: The Fellowship of the Ring",
-      totalPositions: 1000,
-      currentPosition: 183,
-    ),
+    ProgressTrackerModel(projectId: "2", projectName: "The Lord of the Rings: The Fellowship of the Ring", totalPositions: 1000, currentPosition: 183),
     ProgressTrackerModel(projectId: "3", projectName: "The Silmarillion", totalPositions: 1000, currentPosition: 245),
     ProgressTrackerModel(projectId: "4", projectName: "Dune", totalPositions: 1000, currentPosition: 312),
     ProgressTrackerModel(projectId: "5", projectName: "Foundation", totalPositions: 1000, currentPosition: 495),

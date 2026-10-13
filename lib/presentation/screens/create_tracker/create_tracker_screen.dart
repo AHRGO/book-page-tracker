@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../utils/size_utils.dart';
-import '../app_screen.dart';
+import '../app/app_screen.dart';
 import '../../bloc/progress_tracker_bloc.dart';
-import '../loading/loading_screen.dart';
 import 'widgets/project_type_dropdown.dart';
 import 'widgets/project_unity_dropdown.dart';
+import '../loading/loading_screen.dart';
 
 class CreateTrackerScreen extends StatefulWidget {
   const CreateTrackerScreen({super.key});

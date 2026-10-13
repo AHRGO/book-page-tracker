@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../presentation/bloc/progress_tracker_bloc.dart';
-import '../presentation/screens/create_tracker/create_tracker_screen.dart';
+import '../bloc/progress_tracker_bloc.dart';
+import '../screens/create_tracker/create_tracker_screen.dart';
 
 class CreateTrackerButton extends StatelessWidget {
   final ProgressTrackerBloc bloc;

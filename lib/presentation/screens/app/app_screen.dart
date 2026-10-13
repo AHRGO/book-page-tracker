@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/size_utils.dart';
+import '../../../utils/size_utils.dart';
 
 class AppScreen extends StatelessWidget {
   final Widget child;
